@@ -23,7 +23,7 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(morgan('combined', { stream: fs.createWriteStream(process.env.ACCESS_LOG_FILE_PATH) }));
+app.use(morgan('combined', { stream: fs.createWriteStream(process.env.ACCESS_LOG_FILE_PATH, {flags: 'a'}) }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
