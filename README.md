@@ -1,0 +1,3 @@
+- Chose nodejs since we might need websocket support in future
+- Install npm and nodejs
+- Run server using `NODE_ENV=development npm start`
