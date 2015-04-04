@@ -32,8 +32,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Initialize new routes here, was unable to move it into separate initializer file
 var routes = require('./routes/index');
 var location = require('./routes/location');
+var client = require('./routes/client');
 app.use('/', routes);
 app.use('/location', location);
+app.use('/client', client);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

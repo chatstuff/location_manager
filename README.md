@@ -3,3 +3,4 @@
 - Run server using `NODE_ENV=development npm start`
 - API:
   - `curl -i -X PUT -H "Content-Type: application/json" -d '{"client_id":"9868411311", "client_type":"human", "loc":{"lat":34, "lng":66}, "accuracy":34, "fix_time":"2015-04-05T00:01:10+05:30"}' 'localhost:4700/location?a=3'`
+  - `curl -i "localhost:4700/client/clients_near_client?client_id=9868411311&max_distance=3&count=2"`
